@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .top-container {
   width: 80%;
   display: flex;
@@ -27,27 +31,95 @@
 }
 
 .add-new {
+  display: flex;
   align-self: flex-end;
+  height: fit-content;
+  width: fit-content;
   margin: 20px 0;
 }
 
+.task-title-input {
+  /* width: 90%; */
+  padding: 10px;
+  margin: 0 30px;
+  border-radius: 10px;
+  background-color: rgba(193, 239, 255, 0.09);
+  border: 1px solid #5cb8e4;
+  color: #5cb8e4;
+}
+
+.task-title-input::placeholder {
+  color: #5cb8e4;
+}
+
 .add-new .add-new-btn {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(193, 239, 255, 0.09);
-    border: 1px solid #5CB8E4;
-    color: #5CB8E4;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(193, 239, 255, 0.09);
+  border: 1px solid #5cb8e4;
+  color: #5cb8e4;
+}
+.add-new .add-new-btn:active {
+  background-color: rgba(193, 239, 255, 0.6);
 }
 
-.task-box{
-    width: 100%;
+.task-box {
+  width: 100%;
 }
 
-.task-box tr{
-    padding: 15px;;
+.task-box tr {
+  padding: 15px;
 }
 
 .task-box .task-table-heading {
-    border-bottom: 2px solid #000;
-    text-align: left;
+  border-bottom: 2px solid #000;
+  text-align: left;
+}
+
+.task-title-li {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  border-bottom: 2px solid #000;
+}
+
+.new-task-li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  /* flex-direction: row; */
+}
+
+.task-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.task-container .task-title {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #000;
+  padding: 0 10px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.task-container .tasks-added {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-content: baseline; */
+}
+
+.new-task-name {
+  flex-wrap: wrap;
+}
+
+.task-container .tasks-added .new-task-name, .new-serial, .new-task-edit, .new-task-status, .new-task-remove {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    
 }
