@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,128 +19,47 @@
         <div class="tagline">Now or Never 🫵🏾</div>
         <div class="add-new">
           <input
+            id="addTaskValue"
             class="task-title-input"
             type="text"
             placeholder="Type task here"
           />
-          <button class="add-new-btn">Add New +</button>
+          <input
+            id="addTaskValue"
+            class="task-title-input"
+            type="text"
+            placeholder="Current Progress"
+          />
+          <button class="add-new-btn" onclick="return addTask();">
+            Add New +
+          </button>
         </div>
         <div class="task-container">
-          <div class="serial-number">
-            <div class="task-title">#</div>
-            <div class="new-serial">1</div>
-            <div class="new-serial">1</div>
-          </div>
-          <div class="task-name">
-            <div class="task-title">Name</div>
-            <div class="new-task-name">
-              Clean desk right now or you will go to jail for three years
-            </div>
-            <div class="new-task-name">
-              Clean desk right now or you will go to jail for three years
-            </div>
-          </div>
-          <div class="edit">
-            <div class="task-title">Edit</div>
-            <div class="new-task-edit">
-              <button class="edit-btn">Edit</button>
-            </div>
-            <div class="new-task-edit">
-              <button class="edit-btn">Edit</button>
-            </div>
-          </div>
-          <div class="edit">
-            <div class="task-title">Status</div>
-            <div class="new-task-status">
-              <button class="status-btn">Status</button>
-            </div>
-            <div class="new-task-status">
-              <button class="status-btn">Status</button>
-            </div>
-          </div>
-          <div class="edit">
-            <div class="task-title">Remove</div>
-            <div class="new-task-remove">
-              <button class="remove-btn">Remove</button>
-            </div>
-            <div class="new-task-remove">
-              <button class="remove-btn">Remove</button>
-            </div>
-          </div>
-          <!-- <div class="task-table">
-                            <ul class="task-ul">
-                                <li class="task-title-li">
-                                    <div>#</div>
-                                    <div>Name</div>
-                                    <div>Status</div>
-                                    <div>Edit</div>
-                                    <div>Remove</div>
-                                </li>
-                                <li class="new-task-li">
-                                    <div>#</div>
-                                    <div>Hello this task is to clean my task </div>
-                                    <button>Status</button>
-                                    <button>Edit</button>
-                                    <button>Remove</button>
-                                </li>
-                            </ul> -->
-        </div>
-        <hr />
-        <!-- <table class="task-box">
+          <table class="task-box" id="new-task-adder">
             <tr class="task-table-heading">
-                <th>
-                    Serial Number
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Status
-                </th>
-                <th>
-                    Edit
-                </th>
-                <th>
-                    Remove  
-                </th>
+              <!-- <th>Serial Number</th> -->
+              <th>Name</th>
+              <th>Status</th>
+              <th>Edit</th>
+              <th>Remove</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
+            <template id="table-row-template">
+              <tr>
+                <td id="taskSerialNumber">1</td>
+                <td id="taskName">Clean Desk</td>
                 <td><button>IN PROGRESS</button></td>
-                <td><button>EDIT</button></td>
-                <td><button>REMOVE</button></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
-                <td><button>IN PROGRESS</button></td>
-                <td><button>EDIT</button></td>
-                <td><button>REMOVE</button></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
-                <td><button>IN PROGRESS</button></td>
-                <td><button>EDIT</button></td>
-                <td><button>REMOVE</button></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
-                <td><button>IN PROGRESS</button></td>
-                <td><button>EDIT</button></td>
-                <td><button>REMOVE</button></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
-                <td><button>IN PROGRESS</button></td>
-                <td><button>EDIT</button></td>
-                <td><button>REMOVE</button></td>
-            </tr>
-          </table> -->
+                <td>
+                  <button><i class="bx bx-edit-alt"></i></button>
+                </td>
+                <td>
+                  <button id="delete-btn"><i class="bx bx-trash"></i></button>
+                </td>
+              </tr>
+            </template>
+          </table>
+        </div>
       </div>
     </nav>
+    <script src="main.js"></script>
   </body>
 </html>
