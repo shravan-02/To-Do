@@ -26,6 +26,7 @@ function addTask() {
                 this.parentNode.parentNode.remove();
             }
         }
+        
 
   }
 }
